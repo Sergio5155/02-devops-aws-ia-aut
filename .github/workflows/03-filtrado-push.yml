@@ -1,0 +1,16 @@
+name: 03-filtrado-push
+
+on:
+    push:
+        branches: [master]
+        paths: ["web/**"]
+
+jobs:
+    filtro-repo:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v4
+            - name: Aviso de cambio importante
+              run: |
+                  echo "Cambio importante en la carpeta web"
+                  echo "Todo desde la pipeline"
